@@ -1,11 +1,25 @@
 <script lang="ts">
 	import type { ISocial } from '$lib/interfaces/social.interface';
+	import type { IContactForm } from '$lib/interfaces/contactForm.interface';
 
 	import { t } from '$lib/i18n/i18n';
 	import { enhance } from '$app/forms';
+
 	import translations from './translations';
 	import Icon from '$lib/components/Icon/Icon.svelte';
 	export let socialMedia: ISocial[];
+
+	let formState: IContactForm = {
+		firstname: '',
+		lastname: '',
+		subject: '',
+		email: '',
+		message: '',
+	};
+
+	$: isFormValid = Object.values(formState).every(
+		(value) => value.trim() !== '',
+	);
 </script>
 
 <div class="flex flex-col mx-8 lg:mx-32 my-32 gap-16">
@@ -30,7 +44,7 @@
 				</h2>
 				<hr class="w-40 h-1 bg-primary-500" />
 			</div>
-			<form use:enhance method="POST" class="flex flex-col gap-8">
+			<form use:enhance method="POST" class="flex flex-col gap-8" data-netlify="true" name="contact">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 					<label class="label">
 						<input
@@ -38,6 +52,9 @@
 							type="text"
 							placeholder={$t(translations, 'form.firstname')}
 							name="firstname"
+							bind:value={formState.firstname}
+							minlength="1"
+							maxlength="256"
 						/>
 					</label>
 					<label class="label">
@@ -46,6 +63,9 @@
 							type="text"
 							placeholder={$t(translations, 'form.lastname')}
 							name="lastname"
+							bind:value={formState.lastname}
+							minlength="1"
+							maxlength="256"
 						/>
 					</label>
 					<label class="label">
@@ -54,6 +74,9 @@
 							type="text"
 							placeholder={$t(translations, 'form.subject')}
 							name="subject"
+							bind:value={formState.subject}
+							minlength="1"
+							maxlength="256"
 						/>
 					</label>
 					<label class="label">
@@ -62,6 +85,9 @@
 							type="email"
 							placeholder={$t(translations, 'form.email')}
 							name="email"
+							bind:value={formState.email}
+							minlength="1"
+							maxlength="256"
 						/>
 					</label>
 				</div>
@@ -69,14 +95,19 @@
 					<textarea
 						class="textarea"
 						rows="4"
+						minlength="1"
 						maxlength="600"
 						placeholder={$t(translations, 'form.text')}
 						name="message"
+						bind:value={formState.message}
 					/>
 				</label>
-				<button class="btn variant-ghost-primary w-full"
-					>{$t(translations, 'form.submit')}</button
+				<button
+					class="btn variant-ghost-primary w-full"
+					disabled={!isFormValid}
 				>
+					{$t(translations, 'form.submit')}
+				</button>
 			</form>
 		</div>
 		<div class="flex flex-col justify-center items-center gap-8">
