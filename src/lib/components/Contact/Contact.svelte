@@ -44,7 +44,8 @@
 				</h2>
 				<hr class="w-40 h-1 bg-primary-500" />
 			</div>
-			<form use:enhance method="POST" class="flex flex-col gap-8" data-netlify="true" name="contact">
+			<form name="contact-form" use:enhance method="POST" class="flex flex-col gap-8" netlify-honeypot="bot-field" data-netlify="true">
+				<input type="hidden" name="form-name" value="contact-form" />
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 					<label class="label">
 						<input
