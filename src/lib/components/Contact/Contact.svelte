@@ -44,7 +44,7 @@
 				</h2>
 				<hr class="w-40 h-1 bg-primary-500" />
 			</div>
-			<form name="contact-form" method="POST" class="flex flex-col gap-8" netlify-honeypot="bot-field" data-netlify="true">
+			<form name="contact-form" method="POST" class="flex flex-col gap-8" data-netlify="true">
 				<input type="hidden" name="form-name" value="contact-form" />
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 					<label class="label">
@@ -105,6 +105,7 @@
 				</label>
 				<button
 					class="btn variant-ghost-primary w-full"
+					type="submit"
 					disabled={!isFormValid}
 				>
 					{$t(translations, 'form.submit')}
