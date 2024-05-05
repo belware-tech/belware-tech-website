@@ -12,7 +12,7 @@
 					>{$t(translations, 'title.two')}</span
 				>
 			</h2>
-			<hr class="w-72 h-2 bg-secondary-500" />
+			<hr class="w-72 h-2 bg-secondary-500 self-center" />
 		</div>
 
 		<p class="text-2xl leading-relaxed font-light">

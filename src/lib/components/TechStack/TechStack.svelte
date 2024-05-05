@@ -16,7 +16,7 @@
 			>
 			{$t(translations, 'title.three')}
 		</h3>
-		<hr class="w-60 h-2 bg-primary-500" />
+		<hr class="w-60 h-2 bg-primary-500 self-center" />
 	</div>
 
 	<div class="logo-cloud grid-cols-2 lg:!grid-cols-4 gap-1">

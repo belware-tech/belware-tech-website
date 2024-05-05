@@ -3,7 +3,7 @@ const translations: Record<string, Record<string, string>> = {
 		'title.one': 'About',
 		'title.two': 'Us',
 		paragraph:
-			'Based in Latin America, we specialize in crafting bespoke websites that include:',
+			'As a passionate team of software developers, we specialize in crafting bespoke websites. Our services include:',
 		'service.one.title': '🌐 Website Development',
 		'service.one.description':
 			'From engaging, responsive designs to custom functionalities, we create websites that truly represent your business and its unique needs.',
@@ -18,7 +18,7 @@ const translations: Record<string, Record<string, string>> = {
 		'title.one': 'Acerca de',
 		'title.two': 'Nosotros',
 		paragraph:
-			'Con sede en América Latina, nos especializamos en el desarrollo de Software. Nuestros servicios incluyen:',
+			'Como un grupo de apasionados desarrolladores de software, nos especializamos en el desarrollar productos de alta calidad. Nuestros servicios incluyen:',
 		'service.one.title': '🌐 Desarrollo de Sitios Web',
 		'service.one.description':
 			'Desde diseños atractivos y receptivos hasta funcionalidades personalizadas, creamos sitios web que realmente representan tu negocio y sus necesidades únicas.',
