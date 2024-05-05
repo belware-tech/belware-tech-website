@@ -4,17 +4,17 @@ const socialMedia: ISocial[] = [
 	{
 		icon: 'linkedin',
 		name: 'LinkedIn',
-		linkTo: '/',
+		linkTo: 'https://www.linkedin.com/company/belwaretech-llc',
 	},
 	{
 		icon: 'instagram',
 		name: 'Instragram',
-		linkTo: '/',
+		linkTo: 'https://www.instagram.com/belwaretech/',
 	},
 	{
 		icon: 'facebook',
 		name: 'Facebook',
-		linkTo: '/',
+		linkTo: 'https://www.facebook.com/profile.php?id=61559346537695',
 	},
 ];
 
